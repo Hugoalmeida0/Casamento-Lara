@@ -8,35 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Wedding color palette - Champagne/Nude theme */
+    --background: 41 20% 96%;
+    --foreground: 20 14% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 38 25% 94%;
+    --card-foreground: 20 14% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 41 20% 96%;
+    --popover-foreground: 20 14% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 35 25% 75%;
+    --primary-foreground: 20 14% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 15% 88%;
+    --secondary-foreground: 20 14% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 15% 90%;
+    --muted-foreground: 25 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 38 30% 85%;
+    --accent-foreground: 20 14% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 35 25% 75%;
 
     --radius: 0.5rem;
+    
+    /* Wedding specific colors */
+    --champagne: 35 25% 75%;
+    --nude: 40 15% 88%;
+    --cream: 41 20% 96%;
+    --soft-gray: 25 8% 45%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--champagne)) 0%, hsl(var(--nude)) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--background)) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--champagne) / 0.2);
+    --shadow-soft: 0 4px 20px -5px hsl(var(--champagne) / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +75,40 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with warm tones for wedding theme */
+    --background: 20 14% 10%;
+    --foreground: 41 20% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 20 14% 12%;
+    --card-foreground: 41 20% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 20 14% 10%;
+    --popover-foreground: 41 20% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 35 25% 65%;
+    --primary-foreground: 20 14% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 20 14% 18%;
+    --secondary-foreground: 41 20% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 14% 18%;
+    --muted-foreground: 25 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 14% 20%;
+    --accent-foreground: 41 20% 96%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 20 14% 20%;
+    --input: 20 14% 20%;
+    --ring: 35 25% 65%;
+    
+    /* Wedding dark theme colors */
+    --champagne: 35 25% 65%;
+    --nude: 20 14% 25%;
+    --cream: 20 14% 15%;
+    --soft-gray: 25 8% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +126,66 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  /* Wedding typography */
+  .wedding-title {
+    @apply font-playfair text-foreground tracking-wider;
+  }
+  
+  .wedding-subtitle {
+    @apply font-playfair italic text-muted-foreground;
+  }
+  
+  .wedding-text {
+    @apply font-inter text-foreground/80;
+  }
+}
+
+@layer components {
+  /* Wedding button variants */
+  .btn-wedding {
+    @apply bg-gradient-to-r from-champagne to-nude text-foreground px-8 py-3 rounded-full 
+           font-inter font-medium tracking-wide transition-all duration-300 
+           hover:shadow-elegant hover:scale-105 focus:outline-none focus:ring-2 
+           focus:ring-champagne/50 focus:ring-offset-2;
+  }
+  
+  .btn-wedding-outline {
+    @apply border-2 border-champagne text-champagne px-8 py-3 rounded-full 
+           font-inter font-medium tracking-wide transition-all duration-300 
+           hover:bg-champagne hover:text-foreground hover:shadow-soft 
+           focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-champagne {
+    color: hsl(var(--champagne));
+  }
+  
+  .bg-champagne {
+    background-color: hsl(var(--champagne));
+  }
+  
+  .border-champagne {
+    border-color: hsl(var(--champagne));
+  }
+  
+  .bg-gradient-wedding {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .transition-wedding {
+    transition: var(--transition-smooth);
   }
 }
