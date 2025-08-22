@@ -59,7 +59,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="wedding-text text-sm text-muted-foreground">
           <p>© 2026 Lara & Filipi. Criado com amor para nosso dia especial.</p>
-          <p className="mt-2">26 de Julho de 2026 • MG - SP</p>
+          <p className="mt-2">26 de Julho de 2026 • ES</p>
         </div>
       </div>
     </footer>
