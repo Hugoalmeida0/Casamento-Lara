@@ -1,9 +1,9 @@
-import Navigation from '@/components/Navigation';
-import HeroSection from '@/components/HeroSection';
-import TimelineSection from '@/components/TimelineSection';
-import InformationSection from '@/components/InformationSection';
-import RSVPSection from '@/components/RSVPSection';
-import Footer from '@/components/Footer';
+import Navigation from '@/components/cabecalho';
+import HeroSection from '@/components/paginaPrincipal';
+import TimelineSection from '@/components/linhaDoTempo';
+import InformationSection from '@/components/informacoes';
+import RSVPSection from '@/components/confirmarPresenca';
+import Footer from '@/components/rodape';
 
 const Index = () => {
   return (

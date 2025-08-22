@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Heart className="w-6 h-6 text-champagne" />
-            <span className="font-playfair text-lg font-medium text-foreground">A&G</span>
+            <span className="font-playfair text-lg font-medium text-foreground">L&F</span>
           </div>
 
           {/* Desktop Menu */}

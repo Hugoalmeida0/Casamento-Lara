@@ -18,23 +18,47 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Casamento foi em 29 de junho de 2024, então mostramos tempo desde o casamento
-    const weddingDate = new Date('2024-06-29T00:00:00-03:00');
+    // Casamento será em 26 de julho de 2026
+    const weddingDate = new Date('2026-07-26T00:00:00-03:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
-      const difference = now.getTime() - weddingDate.getTime();
+      const difference = weddingDate.getTime() - now.getTime();
 
       if (difference > 0) {
         const totalSeconds = Math.floor(difference / 1000);
         const totalMinutes = Math.floor(totalSeconds / 60);
         const totalHours = Math.floor(totalMinutes / 60);
         const totalDays = Math.floor(totalHours / 24);
-        const totalMonths = Math.floor(totalDays / 30);
+
+        // Cálculo mais preciso para meses
+        let months = 0;
+        let days = totalDays;
+        
+        // Calcula meses considerando o calendário real
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth();
+        const weddingYear = weddingDate.getFullYear();
+        const weddingMonth = weddingDate.getMonth();
+        
+        months = (weddingYear - currentYear) * 12 + (weddingMonth - currentMonth);
+        
+        // Ajusta os dias baseado nos meses calculados
+        const tempDate = new Date(now);
+        tempDate.setMonth(tempDate.getMonth() + months);
+        
+        // Se passou do mês do casamento, ajusta para o mês anterior
+        if (tempDate > weddingDate) {
+          months--;
+          tempDate.setMonth(tempDate.getMonth() - 1);
+        }
+        
+        // Calcula os dias restantes
+        days = Math.floor((weddingDate.getTime() - tempDate.getTime()) / (1000 * 60 * 60 * 24));
 
         return {
-          months: totalMonths,
-          days: totalDays % 30,
+          months: Math.max(0, months),
+          days: Math.max(0, days),
           hours: totalHours % 24,
           minutes: totalMinutes % 60,
           seconds: totalSeconds % 60,
@@ -64,16 +88,16 @@ const CountdownTimer = () => {
 
   return (
     <div className="text-center mb-12">
-      <h2 className="wedding-text text-lg mb-8 tracking-wider">Casados há:</h2>
+      <h2 className="wedding-text text-lg mb-8 tracking-wider">Faltam:</h2>
       
       <div className="grid grid-cols-5 gap-4 max-w-2xl mx-auto">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="text-center">
-            <div className="bg-card/50 backdrop-blur-sm rounded-lg p-4 shadow-soft border border-border/50">
+            <div className="p-4">
               <div className="text-3xl md:text-4xl font-playfair font-bold text-champagne mb-2">
                 {unit.value.toString().padStart(2, '0')}
               </div>
-              <div className="wedding-text text-xs md:text-sm tracking-wider uppercase">
+              <div className="wedding-text text-xs md:text-sm tracking-wider uppercase text-white">
                 {unit.label}
               </div>
             </div>

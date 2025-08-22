@@ -1,12 +1,12 @@
-import CountdownTimer from './CountdownTimer';
+import CountdownTimer from './contagemRegressiva';
 import { Button } from '@/components/ui/button';
-import heroBackground from '@/assets/wedding-hero-bg.jpg';
+import heroBackground from '@/assets/image copy 2.png';
 
 const HeroSection = () => {
   return (
     <section 
       id="inicio"
-      className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden"
+      className="h-screen flex flex-col justify-center items-center relative overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -26,25 +26,25 @@ const HeroSection = () => {
         {/* Main Title */}
         <div className="mb-16">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-normal text-white mb-6 tracking-wider">
-            AMÁBILLY{' '}
+            LARA{' '}
             <span className="text-champagne font-playfair italic">
               &amp;
             </span>{' '}
-            GABRIEL
+            FILIPI
           </h1>
           
           <div className="w-32 h-px bg-champagne mx-auto mb-6"></div>
           
           <p className="text-xl md:text-2xl font-playfair italic text-white/90 mb-4 tracking-wide">
-            nas suas linhas em que nos encontramos
+          "Assim, eles já não são dois, mas sim uma só carne." (Mateus 19:6)
           </p>
           
           <p className="text-lg md:text-xl font-inter font-light text-white/80 tracking-wider">
-            29 DE JUNHO DE 2024
+            29 DE JUNHO DE 2026
           </p>
           
           <p className="text-md font-inter font-light text-white/70 tracking-wider">
-            MG - SP
+            ES
           </p>
         </div>
 
@@ -54,19 +54,7 @@ const HeroSection = () => {
             SAVE THE DATE!
           </h2>
           
-          <Button 
-            className="btn-wedding text-lg px-12 py-4 shadow-elegant"
-            onClick={() => document.getElementById('confirme-presenca')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Confirme sua presença
-          </Button>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
-          </div>
+          
         </div>
       </div>
     </section>
