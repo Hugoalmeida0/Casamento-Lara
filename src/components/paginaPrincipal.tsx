@@ -25,13 +25,20 @@ const HeroSection = () => {
 
         {/* Main Title */}
         <div className="mb-16">
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-normal text-white mb-6 tracking-wider">
-            LARA{' '}
-            <span className="text-champagne font-playfair italic">
-              &amp;
-            </span>{' '}
-            FILIPI
-          </h1>
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-garamond font-normal text-white mb-6 tracking-wider">
+          LARAㅤ
+          <span className="text-champagne font-garamond italic">
+            &amp;
+          </span>
+          ㅤFILIPI
+        </h1>
+
+        <style jsx global>{`
+          @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+          .font-garamond {
+            font-family: 'Cormorant Garamond', serif;
+          }
+        `}</style>
           
           <div className="w-32 h-px bg-champagne mx-auto mb-6"></div>
           
