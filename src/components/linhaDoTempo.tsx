@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
-import couple1 from '@/assets/couple-1.jpg';
-import couple2 from '@/assets/couple-2.jpg';
-import weddingRings from '@/assets/wedding-rings.jpg';
+import fotoCasal1 from '@/assets/foto-casal.jpeg';
+import fotoCasal2 from '@/assets/foto-casal-2.jpeg';
+import fotoCasal3 from '@/assets/foto-casal-3.jpeg';
 
 const TimelineSection = () => {
   const timelineEvents = [
@@ -9,28 +9,28 @@ const TimelineSection = () => {
       number: '01.',
       date: '05 Julho 2020',
       title: 'Nosso Encontro',
-      image: couple1,
+      image: fotoCasal1,
       description: 'Onde tudo começou, o primeiro encontro que mudou nossas vidas para sempre.'
     },
     {
       number: '02.',
       date: '05 Julho 2020',
       title: 'O Início do Namoro',
-      image: couple2,
+      image: fotoCasal2,
       description: 'Nossa história de amor não precisou de um começo oficial, pois ela nasceu no exato momento em que nos encontramos.'
     },
     {
       number: '03.',
       date: '21 Dezembro 2024',
       title: 'O Pedido de Casamento',
-      image: weddingRings,
+      image: fotoCasal3,
       description: 'O momento mágico em que decidimos passar o resto de nossas vidas juntos.'
     },
     {
       number: '04.',
       date: '05 Julho 2026',
       title: 'O Grande Dia',
-      image: couple1,
+      image: fotoCasal1,
       description: 'O dia mais especial de nossas vidas, celebrando nosso amor com família e amigos.'
     }
   ];

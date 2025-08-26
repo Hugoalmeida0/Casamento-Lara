@@ -39,16 +39,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40"></div>
       
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-        {/* Countdown Timer */}
-        <div className="mb-16">
-          <CountdownTimer />
-        </div>
+        
 
         {/* Main Title */}
-        <div className="mb-16">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-seasons font-normal text-white mb-6 tracking-wider">
+        <div className="mb-16 mt-20">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-freight font-normal text-white mb-6 tracking-wider">
           LARA 
-          <span className="text-mainGreen font-seasons italic">
+          <span className="text-mainGreen font-freight">
             &amp;
           </span>
            FILIPI
@@ -56,24 +53,26 @@ const HeroSection = () => {
 
           <div className="w-32 h-px bg-mainGreen mx-auto mb-6"></div>
           
-          <p className="text-xl md:text-2xl font-seasons italic text-white/90 mb-4 tracking-wide">
+          <p className="text-xl md:text-5xl font-bickham italic text-white/90 mb-4 tracking-wide">
           "Assim, eles já não são dois, mas sim uma só carne." (Mateus 19:6)
           </p>
           
-          <p className="text-lg md:text-xl font-inter font-light text-white/80 tracking-wider">
+          <p className="text-lg md:text-xl font-freight font-bold text-white/80 tracking-wider">
             05 DE JULHO DE 2026
           </p>
           
-          <p className="text-md font-inter font-light text-white/70 tracking-wider">
-            ES
-          </p>
         </div>
 
         {/* Save the Date */}
         <div className="mb-16">
-          <h2 className="text-2xl md:text-4xl font-seasons font-bold text-white mb-8 tracking-wider">
+          <h2 className="text-2xl md:text-4xl font-freight font-bold text-white mb-8 tracking-wider">
             SAVE THE DATE!
           </h2>
+
+        {/* Countdown Timer */}
+        <div className="mb-16">
+          <CountdownTimer />
+        </div>
           
           
         </div>

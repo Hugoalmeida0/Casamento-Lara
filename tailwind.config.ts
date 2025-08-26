@@ -22,6 +22,8 @@ export default {
 				seasons: ['The Seasons', 'serif'],
 				beautiful: ['Beautifully Delicious Script', 'cursive'],
 				inter: ['Inter', 'sans-serif'],
+				bickham: ['Bickham Script Pro 3', 'cursive'],
+				freight: ['FreightBigProLight', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

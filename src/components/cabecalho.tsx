@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,22 +18,27 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <Heart className="w-6 h-6 text-mainGreen" />
-            <span className="font-seasons text-lg font-medium text-foreground">L&F</span>
+          <div className="flex items-center">
+            <img 
+              src="/src/assets/logo.png" 
+              alt="Logo L&F" 
+              className="w-12 h-12 object-contain"
+            />
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                className="font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
-              >
-                {item.title}
-              </a>
-            ))}
+          {/* Desktop Menu - Centralizado */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8">
+              {menuItems.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
