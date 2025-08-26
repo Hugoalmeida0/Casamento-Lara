@@ -88,16 +88,16 @@ const CountdownTimer = () => {
 
   return (
     <div className="text-center mb-12">
-      <h2 className="wedding-text text-lg mb-8 tracking-wider">Faltam:</h2>
+      <h2 className="font-beautiful text-lg mb-8 tracking-wider text-white">Faltam:</h2>
       
       <div className="grid grid-cols-5 gap-4 max-w-2xl mx-auto">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="text-center">
-            <div className="p-4">
-              <div className="text-3xl md:text-4xl font-playfair font-bold text-champagne mb-2">
+            <div className="p-4 bg-black/20 backdrop-blur-sm rounded-lg shadow-lg border border-white/10">
+              <div className="text-3xl md:text-4xl font-seasons font-bold text-mainGreen mb-2">
                 {unit.value.toString().padStart(2, '0')}
               </div>
-              <div className="wedding-text text-xs md:text-sm tracking-wider uppercase text-white">
+              <div className="font-inter text-xs md:text-sm tracking-wider uppercase text-white">
                 {unit.label}
               </div>
             </div>

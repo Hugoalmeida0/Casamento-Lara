@@ -34,11 +34,11 @@ const InformationSection = () => {
       <div className="max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl wedding-title font-bold text-champagne mb-6">
+          <h2 className="text-4xl md:text-5xl font-seasons font-bold text-mainGreen mb-6">
             Informações Importantes
           </h2>
-          <div className="w-24 h-px bg-champagne mx-auto mb-6"></div>
-          <p className="wedding-text text-lg max-w-2xl mx-auto">
+          <div className="w-24 h-px bg-mainGreen mx-auto mb-6"></div>
+          <p className="font-inter text-lg max-w-2xl mx-auto text-muted-foreground">
             Tudo que você precisa saber para celebrar conosco
           </p>
         </div>
@@ -53,27 +53,27 @@ const InformationSection = () => {
               >
                 <div className="text-center">
                   {/* Icon */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-champagne/10 rounded-full mb-4 group-hover:bg-champagne/20 transition-wedding">
-                    <div className="text-champagne">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-mainGreen/10 rounded-full mb-4 group-hover:bg-mainGreen/20 transition-wedding">
+                    <div className="text-mainGreen">
                       {card.icon}
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl wedding-title font-bold text-champagne mb-3">
+                  <h3 className="text-xl md:text-2xl font-seasons font-bold text-mainGreen mb-3">
                     {card.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="wedding-text mb-4 leading-relaxed text-sm md:text-base">
+                  <p className="font-inter mb-4 leading-relaxed text-sm md:text-base text-muted-foreground">
                     {card.description}
                   </p>
 
                   {/* Location or Details */}
                   {card.location && (
                     <div className="mb-4 p-3 bg-muted/30 rounded-lg">
-                      <div className="flex items-start justify-center gap-2 text-xs md:text-sm wedding-text">
-                        <MapPin className="w-4 h-4 text-champagne mt-1 flex-shrink-0" />
+                      <div className="flex items-start justify-center gap-2 text-xs md:text-sm font-inter text-muted-foreground">
+                        <MapPin className="w-4 h-4 text-mainGreen mt-1 flex-shrink-0" />
                         <div className="text-left">
                           {card.location.split('\n').map((line, i) => (
                             <div key={i}>{line}</div>
@@ -85,7 +85,7 @@ const InformationSection = () => {
 
                   {card.details && (
                     <div className="mb-4 p-3 bg-muted/30 rounded-lg">
-                      <div className="text-xs md:text-sm wedding-text">
+                      <div className="text-xs md:text-sm font-inter text-muted-foreground">
                         {card.details.split('\n').map((line, i) => (
                           <div key={i}>{line}</div>
                         ))}

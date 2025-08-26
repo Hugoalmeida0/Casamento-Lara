@@ -19,8 +19,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Heart className="w-6 h-6 text-champagne" />
-            <span className="font-playfair text-lg font-medium text-foreground">L&F</span>
+            <Heart className="w-6 h-6 text-mainGreen" />
+            <span className="font-seasons text-lg font-medium text-foreground">L&F</span>
           </div>
 
           {/* Desktop Menu */}
@@ -29,7 +29,7 @@ const Navigation = () => {
               <a
                 key={item.title}
                 href={item.href}
-                className="font-inter text-sm font-medium text-muted-foreground hover:text-champagne transition-wedding tracking-wider uppercase"
+                className="font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
               >
                 {item.title}
               </a>
@@ -40,7 +40,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-muted-foreground hover:text-champagne transition-wedding"
+              className="p-2 text-muted-foreground hover:text-mainGreen transition-wedding"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -56,7 +56,7 @@ const Navigation = () => {
                   key={item.title}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 font-inter text-sm font-medium text-muted-foreground hover:text-champagne transition-wedding tracking-wider uppercase"
+                  className="block px-3 py-2 font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
                 >
                   {item.title}
                 </a>

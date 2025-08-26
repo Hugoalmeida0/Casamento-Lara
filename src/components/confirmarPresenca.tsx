@@ -13,12 +13,12 @@ const RSVPSection = () => {
       <div className="max-w-4xl mx-auto px-4 h-full flex flex-col justify-center">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <Heart className="w-12 h-12 text-champagne mx-auto mb-6" />
-          <h2 className="text-4xl md:text-5xl wedding-title font-bold text-champagne mb-6">
+          <Heart className="w-12 h-12 text-mainGreen mx-auto mb-6" />
+          <h2 className="text-4xl md:text-5xl font-seasons font-bold text-mainGreen mb-6">
             Confirme sua Presença
           </h2>
-          <div className="w-24 h-px bg-champagne mx-auto mb-6"></div>
-          <p className="wedding-text text-lg max-w-2xl mx-auto leading-relaxed">
+          <div className="w-24 h-px bg-mainGreen mx-auto mb-6"></div>
+          <p className="font-inter text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground">
             Sua presença é o maior presente que podemos receber.
           </p>
         </div>

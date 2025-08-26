@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Definição do sistema de design. Todas as cores, gradientes, fontes, etc devem ser definidos aqui. 
+Todas as cores DEVEM ser HSL.
 */
 
 @layer base {
   :root {
-    /* Wedding color palette - Champagne/Nude theme */
+    /* Paleta de cores do casamento - Tema Champagne/Nude */
     --background: 41 20% 96%;
     --foreground: 20 14% 20%;
 
@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 41 20% 96%;
     --popover-foreground: 20 14% 20%;
 
-    --primary: 35 25% 75%;
+    --primary: 85 25% 65%;
     --primary-foreground: 20 14% 20%;
 
     --secondary: 40 15% 88%;
@@ -27,33 +27,33 @@ All colors MUST be HSL.
     --muted: 40 15% 90%;
     --muted-foreground: 25 8% 45%;
 
-    --accent: 38 30% 85%;
+    --accent: 85 25% 75%;
     --accent-foreground: 20 14% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 15% 85%;
-    --input: 40 15% 85%;
-    --ring: 35 25% 75%;
+    --border: 85 25% 75%;
+    --input: 85 25% 75%;
+    --ring: 85 25% 65%;
 
     --radius: 0.5rem;
     
-    /* Wedding specific colors */
-    --champagne: 35 25% 75%;
+    /* Cores específicas do casamento */
+    --main-green: 85 25% 65%;
     --nude: 40 15% 88%;
     --cream: 41 20% 96%;
     --soft-gray: 25 8% 45%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--champagne)) 0%, hsl(var(--nude)) 100%);
+    /* Gradientes */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--main-green)) 0%, hsl(var(--nude)) 100%);
     --gradient-soft: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--background)) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(var(--champagne) / 0.2);
-    --shadow-soft: 0 4px 20px -5px hsl(var(--champagne) / 0.15);
+    /* Sombras */
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--main-green) / 0.2);
+    --shadow-soft: 0 4px 20px -5px hsl(var(--main-green) / 0.15);
     
-    /* Animations */
+    /* Animações */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-gentle: all 0.3s ease-in-out;
 
@@ -75,7 +75,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark mode with warm tones for wedding theme */
+    /* Modo escuro com tons quentes para o tema de casamento */
     --background: 20 14% 10%;
     --foreground: 41 20% 96%;
 
@@ -85,7 +85,7 @@ All colors MUST be HSL.
     --popover: 20 14% 10%;
     --popover-foreground: 41 20% 96%;
 
-    --primary: 35 25% 65%;
+    --primary: 85 25% 55%;
     --primary-foreground: 20 14% 10%;
 
     --secondary: 20 14% 18%;
@@ -94,7 +94,7 @@ All colors MUST be HSL.
     --muted: 20 14% 18%;
     --muted-foreground: 25 8% 65%;
 
-    --accent: 20 14% 20%;
+    --accent: 85 25% 55%;
     --accent-foreground: 41 20% 96%;
 
     --destructive: 0 62.8% 30.6%;
@@ -102,10 +102,10 @@ All colors MUST be HSL.
 
     --border: 20 14% 20%;
     --input: 20 14% 20%;
-    --ring: 35 25% 65%;
+    --ring: 85 25% 55%;
     
-    /* Wedding dark theme colors */
-    --champagne: 35 25% 65%;
+    /* Cores do tema escuro do casamento */
+    --main-green: 85 25% 55%;
     --nude: 20 14% 25%;
     --cream: 20 14% 15%;
     --soft-gray: 25 8% 65%;
@@ -129,13 +129,13 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-inter;
   }
   
-  /* Wedding typography */
+  /* Tipografia do casamento */
   .wedding-title {
-    @apply font-playfair text-foreground tracking-wider;
+    @apply font-seasons text-foreground tracking-wider;
   }
   
   .wedding-subtitle {
-    @apply font-playfair italic text-muted-foreground;
+    @apply font-beautiful text-muted-foreground;
   }
   
   .wedding-text {
@@ -144,7 +144,7 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Wedding button variants */
+  /* Variantes de botões do casamento */
   .btn-wedding {
     @apply bg-gradient-to-r from-primary to-secondary text-foreground px-8 py-3 rounded-full 
            font-inter font-medium tracking-wide transition-all duration-300 
@@ -163,27 +163,27 @@ All colors MUST be HSL.
            font-inter font-medium tracking-wide transition-all duration-300 
            hover:text-foreground focus:outline-none focus:ring-2 
            focus:ring-primary/50 focus:ring-offset-2;
-    border-color: hsl(var(--champagne));
-    color: hsl(var(--champagne));
+    border-color: hsl(var(--main-green));
+    color: hsl(var(--main-green));
   }
   
   .btn-wedding-outline:hover {
-    background-color: hsl(var(--champagne));
+    background-color: hsl(var(--main-green));
     box-shadow: var(--shadow-soft);
   }
 }
 
 @layer utilities {
-  .text-champagne {
-    color: hsl(var(--champagne));
+  .text-main-green {
+    color: hsl(var(--main-green));
   }
   
-  .bg-champagne {
-    background-color: hsl(var(--champagne));
+  .bg-main-green {
+    background-color: hsl(var(--main-green));
   }
   
-  .border-champagne {
-    border-color: hsl(var(--champagne));
+  .border-main-green {
+    border-color: hsl(var(--main-green));
   }
   
   .bg-gradient-wedding {

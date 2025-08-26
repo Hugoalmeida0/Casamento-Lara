@@ -7,28 +7,28 @@ const TimelineSection = () => {
   const timelineEvents = [
     {
       number: '01.',
-      date: '10 April 2018',
+      date: '05 Julho 2020',
       title: 'Nosso Encontro',
       image: couple1,
       description: 'Onde tudo começou, o primeiro encontro que mudou nossas vidas para sempre.'
     },
     {
       number: '02.',
-      date: '15 May 2018',
+      date: '05 Julho 2020',
       title: 'O Início do Namoro',
       image: couple2,
-      description: 'O momento em que decidimos oficializar nossa relação e começar nossa jornada juntos.'
+      description: 'Nossa história de amor não precisou de um começo oficial, pois ela nasceu no exato momento em que nos encontramos.'
     },
     {
       number: '03.',
-      date: '18 Nov 2023',
-      title: 'O Pedido',
+      date: '21 Dezembro 2024',
+      title: 'O Pedido de Casamento',
       image: weddingRings,
       description: 'O momento mágico em que decidimos passar o resto de nossas vidas juntos.'
     },
     {
       number: '04.',
-      date: '26 Jul 2026',
+      date: '05 Julho 2026',
       title: 'O Grande Dia',
       image: couple1,
       description: 'O dia mais especial de nossas vidas, celebrando nosso amor com família e amigos.'
@@ -40,10 +40,10 @@ const TimelineSection = () => {
       <div className="max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl wedding-title font-bold text-champagne mb-6">
+          <h2 className="text-4xl md:text-5xl font-seasons font-bold text-mainGreen mb-6">
             Nossa História
           </h2>
-          <div className="w-24 h-px bg-champagne mx-auto"></div>
+          <div className="w-24 h-px bg-mainGreen mx-auto"></div>
         </div>
 
         {/* Timeline */}
@@ -64,7 +64,7 @@ const TimelineSection = () => {
                       alt={event.title}
                       className="w-full h-48 md:h-64 object-cover rounded-lg shadow-elegant transition-wedding group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-champagne/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-wedding"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-mainGreen/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-wedding"></div>
                   </div>
                 </div>
 
@@ -72,21 +72,21 @@ const TimelineSection = () => {
                 <div className="flex-1 text-center lg:text-left">
                   <Card className="p-4 md:p-6 bg-card/50 backdrop-blur-sm border-border/50 shadow-soft">
                     <div className="mb-4">
-                      <span className="text-3xl md:text-5xl font-playfair font-light text-champagne/30">
+                      <span className="text-3xl md:text-5xl font-seasons font-light text-mainGreen/30">
                         {event.number}
                       </span>
                     </div>
                     
                     <div className="mb-4">
-                      <p className="wedding-text text-sm tracking-wider uppercase mb-2">
+                      <p className="font-beautiful text-sm tracking-wider uppercase mb-2 text-muted-foreground">
                         {event.date}
                       </p>
-                      <h3 className="text-xl md:text-2xl lg:text-3xl wedding-title font-bold text-champagne mb-4">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-seasons font-bold text-mainGreen mb-4">
                         {event.title}
                       </h3>
                     </div>
                     
-                    <p className="wedding-text text-sm md:text-base lg:text-lg leading-relaxed">
+                    <p className="font-inter text-sm md:text-base lg:text-lg leading-relaxed text-muted-foreground">
                       {event.description}
                     </p>
                   </Card>

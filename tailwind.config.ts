@@ -19,7 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				playfair: ['Playfair Display', 'serif'],
+				seasons: ['The Seasons', 'serif'],
+				beautiful: ['Beautifully Delicious Script', 'cursive'],
 				inter: ['Inter', 'sans-serif'],
 			},
 			colors: {
@@ -56,8 +57,8 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Wedding custom colors
-				champagne: 'hsl(var(--champagne))',
+				// Cores personalizadas do casamento
+				mainGreen: 'hsl(var(--main-green))',
 				nude: 'hsl(var(--nude))',
 				cream: 'hsl(var(--cream))',
 				sidebar: {
