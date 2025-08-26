@@ -20,7 +20,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/src/assets/logo.png" 
+              src="/logo.png" 
               alt="Logo L&F" 
               className="w-12 h-12 object-contain"
             />

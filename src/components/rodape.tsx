@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-mainGreen/20 rounded-full mb-4">
             <img 
-                src="/src/assets/logo.png" 
+                src="/logo.png" 
                 alt="Logo L&F" 
                 className="w-14 h-14 object-contain"
             />
