@@ -19,7 +19,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     // Casamento será em 26 de julho de 2026
-    const weddingDate = new Date('2026-07-26T00:00:00-03:00');
+    const weddingDate = new Date('2026-07-26T00:00:00-01:00');
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -88,16 +88,16 @@ const CountdownTimer = () => {
 
   return (
     <div className="text-center mb-12">
-      <h2 className="font-beautiful text-lg mb-8 tracking-wider text-white">Faltam:</h2>
+      <h2 className="font-bickham text-lg md:text-5xl mb-8 tracking-wider text-white">Faltam:</h2>
       
       <div className="grid grid-cols-5 gap-4 max-w-2xl mx-auto">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="text-center">
             <div className="p-4 bg-black/20 backdrop-blur-sm rounded-lg shadow-lg border border-white/10">
-              <div className="text-3xl md:text-4xl font-seasons font-bold text-mainGreen mb-2">
+              <div className="text-3xl md:text-25xl font-bold text-mainGreen mb-2">
                 {unit.value.toString().padStart(2, '0')}
               </div>
-              <div className="font-inter text-xs md:text-sm tracking-wider uppercase text-white">
+              <div className="font-freight text-xs md:text-sm tracking-wider uppercase text-white">
                 {unit.label}
               </div>
             </div>

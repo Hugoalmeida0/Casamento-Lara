@@ -35,20 +35,18 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Background overlay */}
+
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40"></div>
       
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         
-
-        {/* Main Title */}
         <div className="mb-16 mt-20">
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-freight font-normal text-white mb-6 tracking-wider">
-          LARA 
+          LARAﾠ
           <span className="text-mainGreen font-freight">
             &amp;
           </span>
-           FILIPI
+          ﾠFILIPI
         </h1>
 
           <div className="w-32 h-px bg-mainGreen mx-auto mb-6"></div>
@@ -63,13 +61,11 @@ const HeroSection = () => {
           
         </div>
 
-        {/* Save the Date */}
         <div className="mb-16">
           <h2 className="text-2xl md:text-4xl font-freight font-bold text-white mb-8 tracking-wider">
             SAVE THE DATE!
           </h2>
 
-        {/* Countdown Timer */}
         <div className="mb-16">
           <CountdownTimer />
         </div>
