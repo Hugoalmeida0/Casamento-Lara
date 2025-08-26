@@ -61,7 +61,7 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg md:text-xl font-inter font-light text-white/80 tracking-wider">
-            29 DE JUNHO DE 2026
+            05 DE JULHO DE 2026
           </p>
           
           <p className="text-md font-inter font-light text-white/70 tracking-wider">
