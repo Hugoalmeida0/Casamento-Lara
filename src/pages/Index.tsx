@@ -1,5 +1,6 @@
 import Navigation from '@/components/cabecalho';
 import HeroSection from '@/components/paginaPrincipal';
+import SaveTheDate from '@/components/saveTheDate';
 import TimelineSection from '@/components/linhaDoTempo';
 import InformationSection from '@/components/informacoes';
 import RSVPSection from '@/components/confirmarPresenca';
@@ -11,6 +12,7 @@ const Index = () => {
       <Navigation />
       <main>
         <HeroSection />
+        <SaveTheDate />
         <TimelineSection />
         <InformationSection />
         <RSVPSection />

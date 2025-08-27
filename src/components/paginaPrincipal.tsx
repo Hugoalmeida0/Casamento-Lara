@@ -1,9 +1,12 @@
 import CountdownTimer from './contagemRegressiva';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
-import fotoCasal1 from '@/assets/foto-casal.jpeg';
-import fotoCasal2 from '@/assets/foto-casal-2.jpeg';
-import fotoCasal3 from '@/assets/foto-casal-3.jpeg';
+import fotoCasal1 from '@/assets/capa1.jpeg';
+import fotoCasal2 from '@/assets/capa2.jpeg';
+import fotoCasal3 from '@/assets/capa3.jpeg';
+import fotoCasal4 from '@/assets/capa4.jpeg';
+import fotoCasal5 from '@/assets/capa5.jpeg';
+import papelRasgado from '@/assets/papelRasgado.png';
 
 // Hook personalizado para gerenciar a troca de imagens
 const useBackgroundRotation = (images: string[], interval: number = 5000) => {
@@ -21,7 +24,7 @@ const useBackgroundRotation = (images: string[], interval: number = 5000) => {
 };
 
 const HeroSection = () => {
-  const backgroundImages = [fotoCasal1, fotoCasal2, fotoCasal3];
+  const backgroundImages = [fotoCasal1, fotoCasal2, fotoCasal3, fotoCasal4, fotoCasal5];
   const currentBackground = useBackgroundRotation(backgroundImages, 4000); // Troca a cada 4 segundos
 
   return (
@@ -29,14 +32,14 @@ const HeroSection = () => {
       id="inicio"
       className="h-screen flex flex-col justify-center items-center relative overflow-hidden transition-all duration-1000 ease-in-out"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(${currentBackground})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url(${currentBackground})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat'
       }}
     >
 
-      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/50"></div>
       
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         
@@ -60,18 +63,14 @@ const HeroSection = () => {
           </p>
           
         </div>
+      </div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl md:text-4xl font-freight font-bold text-white mb-8 tracking-wider">
-            SAVE THE DATE!
-          </h2>
-
-        <div className="mb-16">
+      <div className="mb-16">
           <CountdownTimer />
         </div>
-          
-          
-        </div>
+      
+      {/* Papel rasgado - fora do container limitado */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 -ml-4 -mr-4" style={{ backgroundImage: `url(${papelRasgado})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       </div>
     </section>
   );

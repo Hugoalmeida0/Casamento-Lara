@@ -11,7 +11,7 @@ Todas as cores DEVEM ser HSL.
 @layer base {
   :root {
     /* Paleta de cores do casamento - Tema Champagne/Nude */
-    --background: 41 20% 96%;
+    --background: 0 0% 94%;
     --foreground: 20 14% 20%;
 
     --card: 38 25% 94%;

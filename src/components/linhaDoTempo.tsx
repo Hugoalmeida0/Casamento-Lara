@@ -1,7 +1,8 @@
 import { Card } from '@/components/ui/card';
-import fotoCasal1 from '@/assets/foto-casal.jpeg';
-import fotoCasal2 from '@/assets/foto-casal-2.jpeg';
-import fotoCasal3 from '@/assets/foto-casal-3.jpeg';
+import fotoEncontro from '@/assets/capa1.jpeg';
+import fotoNamoro from '@/assets/capa2.jpeg';
+import fotoPedido from '@/assets/pedido.jpeg';
+import fotoCasamento from '@/assets/capa4.jpeg';
 
 const TimelineSection = () => {
   const timelineEvents = [
@@ -9,34 +10,34 @@ const TimelineSection = () => {
       number: '01.',
       date: '05 Julho 2020',
       title: 'Nosso Encontro',
-      image: fotoCasal1,
+      image: fotoEncontro,
       description: 'Onde tudo começou, o primeiro encontro que mudou nossas vidas para sempre.'
     },
     {
       number: '02.',
       date: '05 Julho 2020',
       title: 'O Início do Namoro',
-      image: fotoCasal2,
+      image: fotoNamoro,
       description: 'Nossa história de amor não precisou de um começo oficial, pois ela nasceu no exato momento em que nos encontramos.'
     },
     {
       number: '03.',
       date: '21 Dezembro 2024',
       title: 'O Pedido de Casamento',
-      image: fotoCasal3,
+      image: fotoPedido,
       description: 'O momento mágico em que decidimos passar o resto de nossas vidas juntos.'
     },
     {
       number: '04.',
       date: '05 Julho 2026',
       title: 'O Grande Dia',
-      image: fotoCasal1,
+      image: fotoCasamento,
       description: 'O dia mais especial de nossas vidas, celebrando nosso amor com família e amigos.'
     }
   ];
 
   return (
-    <section id="historia" className="min-h-screen py-20 bg-gradient-soft flex flex-col justify-center">
+    <section id="historia" className="min-h-screen py-20 bg-background flex flex-col justify-center">
       <div className="max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
         {/* Section Title */}
         <div className="text-center mb-12">
