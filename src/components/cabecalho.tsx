@@ -8,7 +8,6 @@ const Navigation = () => {
 
   const menuItems = [
     { title: 'início', href: '#inicio' },
-    { title: 'SAVE THE DATE', href: '#save-the-date' },
     { title: 'CONFIRME PRESENÇA', href: '#confirme-presenca' },
     { title: 'PRESENTES', href: '#presentes' },
     { title: 'DICAS E INSTRUÇÕES', href: '#dicas' },

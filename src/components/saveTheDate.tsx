@@ -14,7 +14,7 @@ const SaveTheDate = () => {
           {/* Texto Save the Date com Gradiente */}
           <div className="text-left md:text-left">
             <h2 className="text-[10xl] md:text-8xl lg:text-9xl font-freight font-bold tracking-wider leading-tight">
-                <span className="bg-gradient-to-r from-foreground to-main-green bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-foreground to-mainGreen bg-clip-text text-transparent">
                     SAVE<br />
                     THE<br />
                     DATE!
