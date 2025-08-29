@@ -43,7 +43,7 @@ const InformationSection = () => {
         {/* Section Title */}
         <div className="text-center mb-8 px-4">
           <h2 className="text-4xl md:text-5xl font-seasons font-bold text-mainGreen mb-6">
-            Informações Importantes
+            INFORMAÇÕES IMPORTANTES
           </h2>
           <div className="w-24 h-px bg-mainGreen mx-auto mb-6"></div>
           <p className="font-inter text-lg max-w-2xl mx-auto text-muted-foreground">

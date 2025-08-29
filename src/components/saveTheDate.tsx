@@ -1,6 +1,6 @@
-import fotoCasal1 from '@/assets/capa4.jpeg';
-import fotoCasal2 from '@/assets/capa2.jpeg';
-import fotoCasal3 from '@/assets/capa3.jpeg';
+import fotoCasal1 from '@/assets/std1.png';
+import fotoCasal2 from '@/assets/std2.png';
+import fotoCasal3 from '@/assets/capa2.jpeg';
 
 const SaveTheDate = () => {
   return (
