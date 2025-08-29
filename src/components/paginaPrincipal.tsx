@@ -55,12 +55,9 @@ const HeroSection = () => {
           <div className="w-32 h-px bg-mainGreen mx-auto mb-6"></div>
           
           <p className="text-xl md:text-5xl font-bickham italic text-white/90 mb-4 tracking-wide">
-          "Assim, eles já não são dois, mas sim uma só carne." (Mateus 19:6)
+          Sejam bem vindos ao nosso felizes para sempre...
           </p>
           
-          <p className="text-lg md:text-xl font-freight font-bold text-white/80 tracking-wider">
-            05 DE JULHO DE 2026
-          </p>
           
         </div>
       </div>
