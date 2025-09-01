@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useScroll } from '@/hooks/use-scroll';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isScrolled, isOnHero } = useScroll();
+  const location = useLocation();
 
   const menuItems = [
-    { title: 'início', href: '#inicio' },
-    { title: 'PRESENTES', href: '#presentes' },
-    { title: 'DICAS E INSTRUÇÕES', href: '#dicas' },
-    { title: 'ÁLBUM DE FOTOS', href: '#album' },
-    { title: 'NOSSA HISTÓRIA', href: '#historia' },
+    { title: 'início', href: '/', isExternal: false },
+    { title: 'PRESENTES', href: '/presentes', isExternal: false },
+    { title: 'DICAS E INSTRUÇÕES', href: '#dicas', isExternal: true },
+    { title: 'ÁLBUM DE FOTOS', href: '#album', isExternal: true },
+    { title: 'NOSSA HISTÓRIA', href: '#historia', isExternal: true },
   ];
 
   // Determina as classes baseadas no estado do scroll
@@ -44,13 +46,25 @@ const Navigation = () => {
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center space-x-8">
               {menuItems.map((item) => (
-                <a
-                  key={item.title}
-                  href={item.href}
-                  className={`font-inter text-sm font-medium ${textClasses} transition-wedding tracking-wider uppercase`}
-                >
-                  {item.title}
-                </a>
+                item.isExternal ? (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    className={`font-inter text-sm font-medium ${textClasses} transition-wedding tracking-wider uppercase`}
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.title}
+                    to={item.href}
+                    className={`font-inter text-sm font-medium ${textClasses} transition-wedding tracking-wider uppercase ${
+                      location.pathname === item.href ? 'text-mainGreen' : ''
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                )
               ))}
             </div>
           </div>
@@ -71,14 +85,29 @@ const Navigation = () => {
           <div className="md:hidden border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md">
               {menuItems.map((item) => (
-                <a
-                  key={item.title}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
-                >
-                  {item.title}
-                </a>
+                item.isExternal ? (
+                  <a
+                    key={item.title}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-3 py-2 font-inter text-sm font-medium text-muted-foreground hover:text-mainGreen transition-wedding tracking-wider uppercase"
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.title}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-3 py-2 font-inter text-sm font-medium transition-wedding tracking-wider uppercase ${
+                      location.pathname === item.href 
+                        ? 'text-mainGreen' 
+                        : 'text-muted-foreground hover:text-mainGreen'
+                    }`}
+                  >
+                    {item.title}
+                  </Link>
+                )
               ))}
             </div>
           </div>

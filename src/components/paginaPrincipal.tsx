@@ -1,5 +1,4 @@
 import CountdownTimer from './contagemRegressiva';
-import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import fotoCasal1 from '@/assets/capa1.jpeg';
 import fotoCasal2 from '@/assets/capa2.jpeg';

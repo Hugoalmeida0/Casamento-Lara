@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Heart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const RSVPSection = () => {
+  const navigate = useNavigate();
+  
   const handleClick = () => {
-    // Futuramente este botão direcionará para outra página
-    console.log('Botão de confirmar presença clicado');
-    // Exemplo: window.open('https://sua-pagina-de-confirmacao.com', '_blank');
+    navigate('/presentes');
   };
 
   return (
