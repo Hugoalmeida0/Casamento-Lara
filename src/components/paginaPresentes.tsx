@@ -5,64 +5,7 @@ import cortinaImage from '@/assets/capa1.jpeg';
 import utensiliosImage from '@/assets/capa1.jpeg';
 import tacasImage from '@/assets/capa1.jpeg';
 
-const listaDePresentes = [
-  {
-    id: 1,
-    nome: 'CORTINA PARA JANELA',
-    preco: '90,00',
-    imagem: cortinaImage,
-    comprado: true,
-  },
-  {
-    id: 2,
-    nome: 'AIR FRYER',
-    preco: '500,00',
-    imagem: airFryerImage,
-    comprado: false,
-  },
-  {
-    id: 3,
-    nome: 'UTENSÍLIOS DE COZINHA',
-    preco: '40,00',
-    imagem: utensiliosImage,
-    comprado: false,
-  },
-  {
-    id: 4,
-    nome: 'CONJUNTO DE TAÇAS PARA SOBREMESA',
-    preco: '65,00',
-    imagem: tacasImage,
-    comprado: false,
-  },
-  {
-    id: 5,
-    nome: 'JOGO DE PANELAS',
-    preco: '350,00',
-    imagem: 'https://via.placeholder.com/300',
-    comprado: true,
-  },
-  {
-    id: 6,
-    nome: 'APARELHO DE JANTAR',
-    preco: '250,00',
-    imagem: 'https://via.placeholder.com/300',
-    comprado: false,
-  },
-  {
-    id: 7,
-    nome: 'ROBÔ ASPIRADOR',
-    preco: '1200,00',
-    imagem: 'https://via.placeholder.com/300',
-    comprado: false,
-  },
-  {
-    id: 8,
-    nome: 'LIQUIDIFICADOR',
-    preco: '150,00',
-    imagem: 'https://via.placeholder.com/300',
-    comprado: false,
-  },
-];
+ 
 
 const PaginaPresentes = () => {
   return (
