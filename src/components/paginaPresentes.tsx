@@ -1,13 +1,32 @@
 import React from 'react';
 import backgroundImage from '@/assets/capa1.jpeg';
-import airFryerImage from '@/assets/capa1.jpeg';
-import cortinaImage from '@/assets/capa1.jpeg';
-import utensiliosImage from '@/assets/capa1.jpeg';
-import tacasImage from '@/assets/capa1.jpeg';
+import { useQuery } from '@tanstack/react-query';
 
  
+type Presente = {
+  id: number;
+  nome: string;
+  preco: string | number;
+  imagem: string | null;
+  comprado: boolean;
+};
 
 const PaginaPresentes = () => {
+  const { data: presentes, isLoading, isError } = useQuery<Presente[]>({
+    queryKey: ['presentes'],
+    queryFn: async () => {
+      const res = await fetch('/api/presentes');
+      if (!res.ok) throw new Error('Falha ao carregar presentes');
+      return res.json();
+    },
+  });
+
+  const formatarPreco = (valor: string | number) => {
+    const numero = typeof valor === 'number' ? valor : Number(String(valor).replace(/\./g, '').replace(',', '.'));
+    if (Number.isNaN(numero)) return String(valor);
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(numero);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       
@@ -85,13 +104,22 @@ const PaginaPresentes = () => {
           {/* Grid de presentes */}
           <div className="flex-1 px-8 md:px-12 pb-16 md:pb-20 mt-24">
             <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {listaDePresentes.map((presente) => (
+              {isLoading && (
+                <div className="col-span-full text-center text-muted-foreground">Carregando presentes...</div>
+              )}
+              {isError && (
+                <div className="col-span-full text-center text-red-600">Erro ao carregar presentes.</div>
+              )}
+              {presentes?.length === 0 && !isLoading && !isError && (
+                <div className="col-span-full text-center text-muted-foreground">Nenhum presente cadastrado.</div>
+              )}
+              {presentes?.map((presente) => (
                 <div 
                   key={presente.id}
                   className="bg-white/40 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 overflow-hidden flex flex-col text-center transition-transform hover:scale-105"
                 >
                   <img 
-                    src={presente.imagem} 
+                    src={presente.imagem || '/logo.png'} 
                     alt={presente.nome} 
                     className="w-full h-48 object-cover"
                   />
@@ -100,7 +128,7 @@ const PaginaPresentes = () => {
                       {presente.nome}
                     </h3>
                     <p className="font-inter text-muted-foreground mb-4">
-                      R$ {presente.preco}
+                      {formatarPreco(presente.preco)}
                     </p>
                     <div className="mt-auto">
                       <button
