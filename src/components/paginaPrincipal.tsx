@@ -19,6 +19,11 @@ const useBackgroundRotation = (images: string[], interval: number = 5000) => {
     return () => clearInterval(timer);
   }, [images.length, interval]);
 
+  // Garantir que o índice atual permaneça dentro do intervalo quando o conjunto de imagens muda
+  useEffect(() => {
+    setCurrentImageIndex((prevIndex) => (images.length === 0 ? 0 : prevIndex % images.length))
+  }, [images.length])
+
   return images[currentImageIndex];
 };
 
