@@ -19,6 +19,14 @@
       "dest": "/server/index.js"
     },
     {
+      "src": "/admin",
+      "dest": "/dist/index.html"
+    },
+    {
+      "src": "/presentes",
+      "dest": "/dist/index.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/dist/$1"
     }
