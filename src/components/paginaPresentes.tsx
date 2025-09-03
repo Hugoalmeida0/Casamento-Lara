@@ -267,7 +267,7 @@ const PaginaPresentes = () => {
     queryKey: ['presentes'],
     queryFn: async () => {
       console.log('🔄 Buscando presentes da API...');
-      const res = await fetch('http://localhost:4000/api/presentes');
+      const res = await fetch('/api/presentes');
       console.log('📡 Resposta da API:', res.status, res.statusText);
       if (!res.ok) {
         throw new Error(`Erro ${res.status}: ${res.statusText}`);

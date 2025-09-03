@@ -16,7 +16,7 @@ const PaginaAdmin = () => {
   const { data: presentes, isLoading, isError, error } = useQuery<Presente[]>({
     queryKey: ['presentes'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:4000/api/presentes');
+      const res = await fetch('/api/presentes');
       if (!res.ok) {
         throw new Error(`Erro ${res.status}: ${res.statusText}`);
       }
@@ -29,7 +29,7 @@ const PaginaAdmin = () => {
   // Mutation para marcar como esgotado
   const marcarEsgotadoMutation = useMutation({
     mutationFn: async (id: number) => {
-      const res = await fetch(`http://localhost:4000/api/presentes/${id}/esgotado`, {
+      const res = await fetch(`/api/presentes/${id}/esgotado`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const PaginaAdmin = () => {
   // Mutation para marcar como disponível
   const marcarDisponivelMutation = useMutation({
     mutationFn: async (id: number) => {
-      const res = await fetch(`http://localhost:4000/api/presentes/${id}/disponivel`, {
+      const res = await fetch(`/api/presentes/${id}/disponivel`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
